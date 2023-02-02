@@ -1,0 +1,1405 @@
+:root {
+  --org: #ef9434;
+  --white: #ffffff;
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif
+
+}
+
+
+
+.wrapper {
+
+   
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    height: 78%;
+
+}
+
+
+
+.h3 {
+
+    font-weight: 900
+
+}
+
+
+
+.views {
+
+    font-size: 0.85rem
+
+}
+
+
+
+.btn {
+
+    color: #666;
+
+    font-size: 0.85rem
+
+}
+
+
+
+.btn:hover {
+
+    color: #61b15a
+
+}
+
+
+
+.green-label {
+
+    background-color: #defadb;
+
+    color: #48b83e;
+
+    border-radius: 5px;
+
+    font-size: 0.8rem;
+
+    margin: 0 3px
+
+}
+
+
+
+.radio,
+
+.checkbox {
+
+    padding: 6px 10px
+
+}
+
+
+
+.border {
+
+    border-radius: 12px
+
+}
+
+
+
+.options {
+
+    position: relative;
+
+    padding-left: 25px
+
+}
+
+
+
+.radio label,
+
+.checkbox label {
+
+    display: block;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    margin: 0
+
+}
+
+
+
+.options input {
+
+    opacity: 0
+
+}
+
+
+
+.checkmark {
+
+    position: absolute;
+
+    top: 0px;
+
+    left: 0;
+
+    height: 20px;
+
+    width: 20px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #ddd;
+
+    border-radius: 50%
+
+}
+
+
+
+.options input:checked~.checkmark:after {
+
+    display: block
+
+}
+
+
+
+.options .checkmark:after {
+
+    content: "";
+
+    width: 9px;
+
+    height: 9px;
+
+    display: block;
+
+    background: white;
+
+    position: absolute;
+
+    top: 52%;
+
+    left: 51%;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    transition: 300ms ease-in-out 0s
+
+}
+
+
+
+.options input[type="radio"]:checked~.checkmark {
+
+    background: #61b15a;
+
+    transition: 300ms ease-in-out 0s
+
+}
+
+
+
+.options input[type="radio"]:checked~.checkmark:after {
+
+    transform: translate(-50%, -50%) scale(1)
+
+}
+
+
+
+.count {
+
+    font-size: 0.8rem
+
+}
+
+
+
+label {
+
+    cursor: pointer
+
+}
+
+
+
+.tick {
+
+    display: block;
+
+    position: relative;
+
+    padding-left: 23px;
+
+    cursor: pointer;
+
+    font-size: 0.8rem;
+
+    margin: 0
+
+}
+
+
+
+.tick input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    height: 0;
+
+    width: 0
+
+}
+
+
+
+.check {
+
+    position: absolute;
+
+    top: 1px;
+
+    left: 0;
+
+    height: 18px;
+
+    width: 18px;
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px
+
+}
+
+
+
+.tick:hover input~.check {
+
+    background-color: #f3f3f3
+
+}
+
+
+
+.tick input:checked~.check {
+
+    background-color: #61b15a
+
+}
+
+
+
+.check:after {
+
+    content: "";
+
+    position: absolute;
+
+    display: none
+
+}
+
+
+
+.tick input:checked~.check:after {
+
+    display: block;
+
+    transform: rotate(45deg) scale(1)
+
+}
+
+
+
+.tick .check:after {
+
+    left: 6px;
+
+    top: 2px;
+
+    width: 5px;
+
+    height: 10px;
+
+    border: solid white;
+
+    border-width: 0 3px 3px 0;
+
+    transform: rotate(45deg) scale(2)
+
+}
+
+
+
+#country {
+
+    font-size: 0.8rem;
+
+    border: none;
+
+    border-left: 1px solid #ccc;
+
+    padding: 0px 10px;
+
+    outline: none;
+
+    font-weight: 900
+
+}
+
+
+
+.close {
+
+    font-size: 1.2rem
+
+}
+
+
+
+div.text-muted {
+
+    font-size: 0.85rem
+
+}
+
+
+
+#sidebar {
+
+    width: 25%;
+
+    float: left
+
+}
+
+
+
+.category {
+
+    font-size: 0.9rem;
+
+    cursor: pointer
+
+}
+
+
+
+.list-group-item {
+
+    border: none;
+
+    padding: 0.3rem 0.4rem 0.3rem 0rem
+
+}
+
+
+
+.badge-primary {
+
+     background-color: #fadbdb;
+
+    color: var(--org);
+
+}
+
+
+
+.brand .check {
+
+    background-color: #fff;
+
+    top: 3px;
+
+    border: 1px solid #666
+
+}
+
+
+
+.brand .tick {
+
+    font-size: 1rem;
+
+    padding-left: 25px
+
+}
+
+
+
+.rating .check {
+
+    background-color: #fff;
+
+    border: 1px solid #666;
+
+    top: 0
+
+}
+
+
+
+.rating .tick {
+
+    font-size: 0.9rem;
+
+    padding-left: 25px
+
+}
+
+
+
+.rating .fas.fa-star {
+
+    color: #ffbb00;
+
+    padding: 0px 3px
+
+}
+
+
+
+.brand .tick:hover input~.check,
+
+.rating .tick:hover input~.check {
+
+    background-color: #f9f9f9
+
+}
+
+
+
+.brand .tick input:checked~.check,
+
+.rating .tick input:checked~.check {
+
+    background-color: #61b15a
+
+}
+
+
+
+#products {
+
+    width: 75%;
+
+    padding-left: 30px;
+
+    margin: 0;
+
+    float: right
+
+}
+
+
+
+
+
+
+
+.card-body {
+
+    padding: 0.5rem
+
+}
+
+
+
+.card-body .description {
+
+    font-size: 0.78rem;
+
+    padding-bottom: 8px
+
+}
+
+
+
+div.h6,
+
+h6 {
+
+    margin: 0
+
+}
+
+
+
+.product .fa-star {
+
+    font-size: 0.9rem
+
+}
+
+
+
+.rebate {
+
+    font-size: 0.9rem
+
+}
+
+
+
+.btn.btn-primary {
+
+    background-color: #48b83e;
+
+    color: #fff;
+
+    border: 1px solid #008000;
+
+    
+
+    font-weight: 800
+
+}
+
+
+
+.btn.btn-primary:hover {
+
+    background-color: var(--org);
+
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--org);
+    border-color: var(--org);
+}
+
+
+
+img {
+
+    width: 192px;
+
+    height: 132px;
+
+    object-fit: contain
+
+}
+
+
+
+.clear {
+
+    clear: both
+
+}
+
+
+
+.btn.btn-success {
+
+    visibility: hidden
+
+}
+
+
+
+@media(min-width:992px) {
+
+
+
+    .filter,
+
+    #mobile-filter {
+
+        display: none
+
+    }
+
+}
+
+
+
+@media(min-width:768px) and (max-width:991px) {
+
+
+
+    .radio,
+
+    .checkbox {
+
+        padding: 6px 10px;
+
+        width: 49%;
+
+        float: left;
+
+        margin: 5px 5px 5px 0px
+
+    }
+
+
+
+    .filter,
+
+    #mobile-filter {
+
+        display: none
+
+    }
+
+}
+
+
+
+@media(min-width:576px) and (max-width:767px) {
+
+    #sidebar {
+
+        width: 35%
+
+    }
+
+
+
+    #products {
+
+        width: 65%
+
+    }
+
+
+
+    .filter,
+
+    #mobile-filter {
+
+        display: none
+
+    }
+
+
+
+    .h3+.ml-auto {
+
+        margin: 0
+
+    }
+
+}
+
+
+
+@media(max-width:575px) {
+
+    .wrapper {
+
+        padding-bottom: 200px;
+
+        height: 100%;
+
+    }
+
+
+
+    .h3 {
+
+        font-size: 1.3rem
+
+    }
+
+
+
+    #sidebar {
+
+        display: none
+
+    }
+
+
+
+    #products {
+
+        width: 100%;
+
+        float: none
+
+    }
+
+
+
+    #products {
+
+        padding: 0
+
+    }
+
+
+
+    .clear {
+
+        float: left;
+
+        width: 80%
+
+    }
+
+
+
+    .btn.btn-success {
+
+        visibility: visible;
+
+        margin: 10px 0px;
+
+        color: #fff;
+
+        padding: 0.2rem 0.1rem;
+
+        width: 20%
+
+    }
+
+
+
+    .green-label {
+
+        width: 50%
+
+    }
+
+
+
+    .btn.text-success {
+
+        padding: 0
+
+    }
+
+
+
+    .content,
+
+    #mobile-filter {
+
+        clear: both
+
+    }
+
+}
+
+.btn.btn-primary {
+
+    background-color: var(--org);
+
+    color: #fff;
+
+    border: 1px solid var(--org);
+
+    border-radius: 20px;
+
+    font-weight: 800;
+
+}
+
+.product .fas.fa-star {
+
+    color: #ffbb00;
+
+    padding: 0px 3px;
+
+}
+
+
+
+.options input[type="radio"]:checked~.checkmark {
+
+    background: var(--org);
+
+    transition: 300ms ease-in-out 0s;
+
+}
+
+.options input[type="radio"]:checked~.checkmark {
+
+    background: var(--org);
+
+    transition: 300ms ease-in-out 0s;
+
+}
+
+.tick input:checked~.check {
+
+    background-color: var(--org);
+
+}
+
+.text-success {
+
+    color: var(--org)!important;
+
+}
+
+.spad {
+
+    padding-top: 36px;
+
+    padding-bottom: 19px;
+
+    padding-left: 4px;
+
+}
+
+.brand .tick input:checked~.check, .rating .tick input:checked~.check {
+
+    background-color: var(--org);
+
+}
+
+
+
+/* header code  */
+
+
+
+.more-option .card-heading a[aria-expanded=true]:after, .more-option .card-heading > a.active:after {
+
+    content: "K";
+
+    font-size: 16px;
+
+    font-family: "ElegantIcons";
+
+    color: #ffffff;
+
+    background: var(--org); /*red*/
+
+}
+
+        .more-option .card .card-body .mo-list .ml-column label input:checked ~ span {
+
+    background: #ffffff;
+
+}
+
+        .more-option .card .card-body .mo-list .ml-column label .checkbox {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 4px;
+
+    width: 12px;
+
+    height: 12px;
+
+    border: 1px solid #ffffff;
+
+    border-radius: 2px;
+
+    content: "";
+
+}
+
+        .more-option .card .card-body .mo-list .ml-column label {
+
+    font-size: 14px;
+
+    color: #ffffff;
+
+    font-weight: 500;
+
+    position: relative;
+
+    padding-left: 26px;
+
+    cursor: pointer;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+}
+
+        .categories-section {
+
+    overflow: hidden;
+
+    padding-top: 16px;
+
+    padding: 24px;
+
+}
+
+        .section-title h3:after {
+
+    position: absolute;
+
+    left: 412px;
+
+    top: -9px;
+
+    width: 5px;
+
+    height: 46px;
+
+    background: var(--org);
+
+    content: "";
+
+}
+
+
+
+.section-title h4, .section-title h5, .section-title h6 ,.section-title h3 {
+
+    color: #111111;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    position: relative;
+
+    padding-left: 20px;
+
+}
+
+      
+
+
+
+.test2 {
+
+  background-image: url('http://127.0.0.1:8000/assets/img/slider/slider1.jpg');
+
+  line-height: 300px;
+
+  height: 300px;
+
+  
+
+
+
+  background-size: cover;
+
+  /*position: absolute;*/
+
+  /*margin-top: 300px;*/
+
+  text-align: center;
+
+}
+
+
+
+.test2 p {
+
+  color: white;
+
+  display: inline-block;
+
+  background-color: rgba(0,0,0,.6);
+
+  padding: 10px;
+
+}
+
+
+
+.hs-top .ht-widget .hw-btn {
+
+    font-size: 14px;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    background: var(--org);
+
+    padding: 14px 30px;
+
+    text-transform: uppercase;
+
+    display: inline-block;
+
+}
+
+
+
+.hs-nav .nav-menu ul li a:after {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 42px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--org);
+
+    content: "";
+
+    opacity: 0;
+
+    -webkit-transition: all 0.3s;
+
+    transition: all 0.3s;
+
+}
+
+
+
+.pd-text .pd-board .tab-board .nav-tabs .nav-item a.active {
+
+    color: #ffffff;
+
+    background: var(--org);
+
+}
+
+.pd-text .pd-board .tab-board .nav-tabs {
+
+    background: black;
+
+    border-bottom: none;
+
+}
+
+.pd-text .pd-board .tab-board .tab-content .tab-details ul li .type-value {
+
+    color: var(--org);
+
+    display: inline-block;
+
+}
+
+.primary-btn {
+
+    background-color: var(--org);
+
+    border: none;
+
+    color: white;
+
+    padding: 1px 13px 1px 15px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 11px;
+
+    border-radius: 0px;
+
+    -webkit-border-radius: 0px;
+
+    -moz-border-radius: 0px;
+
+    -ms-border-radius: 0px;
+
+    -o-border-radius: 0px;
+
+}
+
+.primary-btn:hover {
+
+    border: 1px solid #f00;
+
+    background: var(--org);
+
+    color: #fff;
+
+}
+
+.footer-section {
+
+    background: #000000;
+
+    padding-top: 70px;
+
+}
+
+.site-btn {
+
+    font-size: 14px;
+
+    color: #ffffff;
+
+    background: var(--org);
+
+    border: none;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+}
+
+.hs-top .ht-widget ul li i {
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    color: var(--org);
+
+    height: 46px;
+
+    width: 46px;
+
+    background: #f5f5f5;
+
+    line-height: 46px;
+
+    text-align: center;
+
+    margin-right: 10px;
+
+}
+
+ .search-section{
+
+            background-image: url('https://demo.rixhost.in/literature/public/assets/img/bg.jpg');
+
+
+
+         
+
+        }
+
+
+
+        .search-form-content .filter-form .search-btn {
+
+    font-size: 14px;
+
+    height: 46px;
+
+    background: var(--org);
+
+    color: #ffffff;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+    width: 282px;
+
+}
+
+.form-select {
+
+    height: 47px;
+
+    width: 100%;
+
+    border-radius: 5px;
+
+}
+
+
+
+.section-title h4:after, .section-title h5:after, .section-title h6:after {
+
+    position: absolute;
+
+    left: 0;
+
+    top: -9px;
+
+    width: 5px;
+
+    height: 46px;
+
+    background:  var(--org);
+
+    content: "";
+
+}
+
+.more-option .card-heading a:after, .more-option .card-heading > a.active[aria-expanded=false]:after {
+
+    content: "L";
+
+    font-size: 16px;
+
+    font-family: "ElegantIcons";
+
+    color: #ffffff;
+
+    background: var(--org);
+
+}
+
+.figure-caption {
+
+    font-size: 90%;
+
+    color: #6c757d;
+
+    text-align: center;
+
+    font-weight: 600;
+
+}
+
+.sidebar {
+
+  height: 100%;
+
+  width: 0;
+
+  position: fixed;
+
+  z-index: 1;
+
+  top: 0;
+
+  right: 0;
+
+  background-color: var(--org);
+
+  overflow-x: hidden;
+
+  transition: 0.5s;
+
+  padding-top: 60px;
+
+}
+
+
+
+.sidebar a {
+
+  padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+
+  font-size: 25px;
+
+  color: #fff;
+
+  display: block;
+
+  transition: 0.3s;
+
+}
+
+
+
+.sidebar a:hover {
+
+  color: #f1f1f1;
+
+}
+
+
+
+.sidebar .closebtn {
+
+  position: absolute;
+
+  top: 0;
+
+  right: 25px;
+
+  font-size: 36px;
+
+  margin-left: 50px;
+
+}
+
+
+
+.openbtn {
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  background-color: #111;
+
+  color: white;
+
+  padding: 10px 15px;
+
+  border: none;
+
+}
+
+
+
+.openbtn:hover {
+
+  background-color: #444;
+
+}
+
+
+
+#main {
+
+  transition: margin-left .5s;
+
+  padding: 16px;
+
+}
+
+.sidebar {
+
+    height: 100%;
+
+    width: 0;
+
+    position: fixed;
+
+    z-index: 2;
+
+    top: 0;
+
+    right: 0;
+
+    background-color: var(--org);
+
+    overflow-x: hidden;
+
+    transition: 0.5s;
+
+    padding-top: 60px;
+
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+
+  .sidebar {padding-top: 15px;}
+
+  .sidebar a {font-size: 18px;}
+
+}
